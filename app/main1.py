@@ -1,7 +1,7 @@
 
 from enum import auto
 import imp
-from msilib.schema import PublishComponent
+#from msilib.schema import PublishComponent
 from multiprocessing import synchronize
 from numbers import Real
 from pyexpat import model
