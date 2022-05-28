@@ -1,6 +1,6 @@
 
 from logging.config import fileConfig
-#from turtle import settiltangle
+from turtle import settiltangle
 from urllib.parse import quote 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
