@@ -2,11 +2,11 @@
 from enum import auto
 import imp
 #from msilib.schema import PublishComponent
-from multiprocessing import synchronize
+#from multiprocessing import synchronize
 from numbers import Real
-from pyexpat import model
+#from pyexpat import model
 from sqlite3 import Cursor
-from tkinter.filedialog import askopenfilename
+#from tkinter.filedialog import askopenfilename
 from turtle import title
 from xmlrpc.client import FastMarshaller
 from app.routers.vote import vote
@@ -57,7 +57,7 @@ app.include_router(user.router)
 app.include_router(auth.router)
 app.include_router(vote.router)
 
-@app.get("/localhost")
+@app.get("/")
 def read_root():
     return {"Hello": "World"}
 
