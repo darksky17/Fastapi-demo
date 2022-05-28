@@ -1,5 +1,4 @@
 from logging import raiseExceptions
-from subprocess import DETACHED_PROCESS
 from sys import prefix
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from ..import schemas, database, models, oauth2
