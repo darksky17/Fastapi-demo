@@ -1,18 +1,12 @@
 
 from enum import auto
 import imp
-#from msilib.schema import PublishComponent
-#from multiprocessing import synchronize
 from numbers import Real
-#from pyexpat import model
 from sqlite3 import Cursor
-#from tkinter.filedialog import askopenfilename
-from turtle import title
 from xmlrpc.client import FastMarshaller
 from app.routers.vote import vote
 from fastapi import FastAPI
 from psycopg2.extras import RealDictCursor
-from .import models
 from sqlalchemy.orm import Session
 from .database import engine, SessionLocal
 from .routers import post, user, auth, vote
@@ -47,7 +41,7 @@ def get_db():
             
 
 
-my_posts=[{"title":"top ten anime","Content":"One piece","id":1}, {"title":"top ten char","Content":"Ace","id":2}]
+
 
 
 
