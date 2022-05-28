@@ -18,7 +18,7 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/users", response_model=schemas.Userresp)
+@router.post("/", response_model=schemas.Userresp)
 def create_user(user:schemas.Usercreate,db: Session=Depends(get_db)):
     
     hashed_pwd= utils.hash(user.password)

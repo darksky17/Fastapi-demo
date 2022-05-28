@@ -19,7 +19,7 @@ def get_db():
         db.close()
 
 
-@router.get("/posts", response_model=List[schemas.PostOut])
+@router.get("/", response_model=List[schemas.PostOut])
 
 def lol(db: Session=Depends(get_db), current_user: int= Depends(oauth2.get_current_user), limit:int=10,skip:int=0,search:Optional[str]=""): 
     #cursor.execute("""SELECT * FROM "Posts" """)
@@ -63,7 +63,7 @@ def delete_post(id: int, db: Session=Depends(get_db), user_id: int= Depends(oaut
 
 
 
-@router.post("/posts", response_model=schemas.Postresp)
+@router.post("/", response_model=schemas.Postresp)
 def creatt(anime_list: schemas.PostCreate,db: Session=Depends(get_db), user_id : int= Depends(oauth2.get_current_user)):
     
    new__thing=models.Post(owner_id=user_id.id,**anime_list.dict())
